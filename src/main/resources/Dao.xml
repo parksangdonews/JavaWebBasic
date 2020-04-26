@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dao" class="cli_spring.a2_spring_context_xml.Dao">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <bean id="dao_create" class="cli_spring.a2_spring_context_xml.Dao"
+           factory-method="createDao">
+    </bean>
+
+    <bean id="factory" class="cli_spring.a2_spring_context_xml.FactoryClass"/>
+
+    <bean id="daoBean" class="cli_spring.a2_spring_context_xml.Dao"
+          factory-bean="factory"
+          factory-method="createDaoInstance">
+    </bean>
+
+
+
+
+</beans>
